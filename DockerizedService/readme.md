@@ -42,10 +42,19 @@ When user visits the /secret route, they should be prompted for the username and
 
 Create a Dockerfile for the Node.js service that will build a Docker image. You should be able to run the Docker image locally. Make sure that the .env file is not included in the Docker image.
 
+#### Action
+
+- Build image ```docker build -t nodejs-service .```
+- Run container: ```docker run -d -p 3002:3002 --env-file .env --name nodejs-app nodejs-service```
+- Test routes: ```curl http://localhost:3002/```
+- View logs: ```docker logs nodejs-app```
+- Stop container: ```docker stop nodejs-app```
+- Remove: ```docker rm nodejs-app```
+
 ### Part 3: Setup a remote Linux Server
 
 Setup a remote Linux server on either DigitalOcean, AWS, or any other provider. You can either set it up manually by using SSH or use a mix of Ansible or Terraform from previous projects.
 
 ### Part 4: Deploy the Dockerized Node.js service
 
-Create a workflow that will build a Docker image and push it to the container registry. The workflow should then deploy the Docker image to the remote server. Feel free to explore secrets management in GitHub Actions. I will leave the implementation details to you.
+Create a workflow that will build a Docker image and push it to the container registry. The workflow should then deploy the Docker image to the remote server. Feel free to explore secrets management in GitHub Actions. 
