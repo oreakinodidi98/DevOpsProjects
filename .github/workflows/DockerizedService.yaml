@@ -31,4 +31,4 @@ jobs:
           context: ./DockerizedService
           file: ./DockerizedService/Dockerfile
           push: true
-          tags: oreakinodidi/DockerizedService:${{ github.sha }}
+          tags: oreakinodidi/dockerizedservice:${{ github.sha }}
