@@ -108,3 +108,5 @@ test-output/
 
 # Ignore Mac system files
 *.DS_Store
+
+node_modules/

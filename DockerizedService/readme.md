@@ -31,7 +31,12 @@ When user visits the /secret route, they should be prompted for the username and
 
 1. Navigate to the DockerizedService directory and initialize ```npm init -y```
 2. install dependencies ```npm install express dotenv express-basic-auth```
-3. Create index.js 
+3. Create index.js
+4. Create .env
+5. Add Start Script to package.json
+6. Start the server ```npm start```
+7. Test routes ```curl http://localhost:3002/```
+8. Expected output: ```Hello, world!```
 
 ### Part 2: Dockerizing the Node.js service
 
